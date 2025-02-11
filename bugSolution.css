@@ -1,0 +1,19 @@
+/* bugSolution.css */
+
+#container {
+  width: 50%; /* Use percentage for parent container */
+  height: 200px; 
+}
+
+#element {
+  width: calc(50% - 20px); /* Correctly calculate the width */
+  height: 100%;
+  background-color: lightblue;
+}
+
+/* Use clear selectors to avoid float issues */
+#element::after {
+  content: "";
+  display: table;
+  clear: both;
+}
